@@ -3,7 +3,6 @@ use std::io::{BufReader, stdin};
 use std::path::Path;
 
 fn main() {
-    let tamanho = 12;
     let mut o = String::new();
     let path = Path::new("./data/matriz.json");
     let file = File::open(&path).unwrap();
