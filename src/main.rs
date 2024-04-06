@@ -19,25 +19,23 @@ fn main() {
     let mut coluna = 11;
     let mut linha_inicio = 1;
     let mut linha_fim = 10;
-    let mut soma_total = 0;
+    let mut soma = 0;
 
     while linha_inicio <= linha_fim {
-        let mut soma = 0;
-
         for linha in linha_inicio..=linha_fim {
             soma += matriz[linha][coluna];
         }
-
-        soma_total += soma;
-
         coluna -= 1;
         linha_inicio += 1;
         linha_fim -= 1;
     }
 
     if o == "M" {
-        println!("Média total da soma: {}", soma_total / 30);
+        println!("Média total da soma: {}", soma / 30);
+    } else if o == "S" {
+        println!("Soma total: {}", soma);
     } else {
-        println!("Soma total: {}", soma_total);
+        println!("informe uma entrada válida");
+        return;
     }
 }
